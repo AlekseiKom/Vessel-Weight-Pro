@@ -6,33 +6,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#0d1b3e">
-  <meta name="description" content="Vessel-Weight Pro — профессиональный калькулятор контрольной перевески и генератор тальманских листов для погрузки/выгрузки судов и вагонов.">
+  <meta name="description"
+    content="Vessel-Weight Pro — профессиональный калькулятор контрольной перевески и генератор тальманских листов для погрузки/выгрузки судов и вагонов.">
   <title>Vessel-Weight Pro | Контрольная перевеска</title>
-  
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <!-- Фоновое морское свечение -->
+
   <div class="bg-glow bg-glow-1"></div>
   <div class="bg-glow bg-glow-2"></div>
 
   <div class="app-layout">
-    
+
     <!-- Шапка приложения -->
     <header class="app-header">
       <div class="header-content">
         <div class="brand">
           <div class="brand-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/>
-              <path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/>
-              <path d="M7 21h10"/>
-              <path d="M12 3v18"/>
-              <path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" />
+              <path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" />
+              <path d="M7 21h10" />
+              <path d="M12 3v18" />
+              <path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2" />
             </svg>
           </div>
           <div>
@@ -48,7 +53,15 @@
           </span>
           <button id="themeToggleBtn" class="btn-icon" title="Сменить тему (Тёмная/Светлая)" aria-label="Сменить тему">
             <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/>
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2" />
+              <path d="M12 20v2" />
+              <path d="m4.93 4.93 1.41 1.41" />
+              <path d="m17.66 17.66 1.41 1.41" />
+              <path d="M2 12h2" />
+              <path d="M20 12h2" />
+              <path d="m6.34 17.66-1.41 1.41" />
+              <path d="m19.07 4.93-1.41 1.41" />
             </svg>
           </button>
         </div>
@@ -57,7 +70,7 @@
 
     <!-- Основная рабочая область -->
     <main class="main-content">
-      
+
       <!-- Левая колонка: форма ввода -->
       <section class="panel panel-form">
         <div class="panel-header">
@@ -71,16 +84,18 @@
         </div>
 
         <form id="vesselForm" class="calc-form" novalidate>
-          
+
           <!-- Опциональные метаданные для тальманского листа -->
           <div class="form-row-meta">
             <div class="input-group">
               <label for="vesselName">Судно / Партия / Трюм <span class="label-hint">(для отчёта)</span></label>
-              <input id="vesselName" class="form-input" type="text" placeholder="например: т/х «Балтика», Трюм №2" maxlength="60">
+              <input id="vesselName" class="form-input" type="text" placeholder="например: т/х «Балтика», Трюм №2"
+                maxlength="60">
             </div>
             <div class="input-group">
               <label for="cargoType">Груз / Профиль</label>
-              <input id="cargoType" class="form-input" type="text" placeholder="например: Арматура №25, L=12м" value="Арматура / Прокат">
+              <input id="cargoType" class="form-input" type="text" placeholder="например: Арматура №25, L=12м"
+                value="Арматура / Прокат">
             </div>
           </div>
 
@@ -95,7 +110,8 @@
               <span class="unit-badge">кг</span>
             </label>
             <div class="input-wrapper">
-              <input id="totalWeight" class="form-input form-input-lg" required type="number" step="10" min="10" inputmode="numeric" placeholder="например: 125480">
+              <input id="totalWeight" class="form-input form-input-lg" required type="number" step="10" min="10"
+                inputmode="numeric" placeholder="например: 125480">
             </div>
             <div class="field-feedback" id="weightFeedback"></div>
           </div>
@@ -106,7 +122,8 @@
                 <span>Всего связок / шт</span>
                 <span class="unit-badge">шт</span>
               </label>
-              <input id="totalUnits" class="form-input" required type="number" min="1" inputmode="numeric" placeholder="например: 42">
+              <input id="totalUnits" class="form-input" required type="number" min="1" inputmode="numeric"
+                placeholder="например: 42">
               <div class="field-feedback" id="unitsFeedback"></div>
             </div>
 
@@ -115,7 +132,8 @@
                 <span>В одном подъёме</span>
                 <span class="unit-badge">св/шт</span>
               </label>
-              <input id="liftUnits" class="form-input" required type="number" min="1" inputmode="numeric" placeholder="например: 4">
+              <input id="liftUnits" class="form-input" required type="number" min="1" inputmode="numeric"
+                placeholder="например: 4">
               <div class="field-feedback" id="liftUnitsFeedback"></div>
             </div>
           </div>
@@ -124,15 +142,19 @@
           <div class="form-section-title surveyor-title">
             <div class="title-with-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="section-icon">
-                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
               </svg>
               <span>Контрольные замеры сюрвейеров</span>
             </div>
             <span class="badge-optional">Опционально</span>
           </div>
-          
+
           <p class="surveyor-hint">
-            Вес контрольных подъёмов со стандартным количеством связок/штук, взвешенных инспектором. Они фиксируются в ведомости, а остаток распределяется автоматически.
+            Вес контрольных подъёмов со стандартным количеством связок/штук, взвешенных инспектором. Они фиксируются в
+            ведомости, а остаток распределяется автоматически.
           </p>
 
           <div class="grid-2-col">
@@ -142,7 +164,8 @@
                 <span class="badge-tag tag-s1">С-1</span>
               </label>
               <div class="input-wrapper">
-                <input id="surveyor1" class="form-input" type="number" step="10" min="0" inputmode="numeric" placeholder="замер 1 (необязательно)">
+                <input id="surveyor1" class="form-input" type="number" step="10" min="0" inputmode="numeric"
+                  placeholder="замер 1 (необязательно)">
               </div>
               <span class="sub-hint" id="s1Hint"></span>
             </div>
@@ -153,7 +176,8 @@
                 <span class="badge-tag tag-s2">С-2</span>
               </label>
               <div class="input-wrapper">
-                <input id="surveyor2" class="form-input" type="number" step="10" min="0" inputmode="numeric" placeholder="замер 2 (необязательно)">
+                <input id="surveyor2" class="form-input" type="number" step="10" min="0" inputmode="numeric"
+                  placeholder="замер 2 (необязательно)">
               </div>
               <span class="sub-hint" id="s2Hint"></span>
             </div>
@@ -164,7 +188,7 @@
             <summary class="advanced-summary">
               <span>Дополнительные настройки (Шаг весов, SWL крана)</span>
               <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="6 9 12 15 18 9"/>
+                <polyline points="6 9 12 15 18 9" />
               </svg>
             </summary>
             <div class="advanced-content">
@@ -181,7 +205,8 @@
 
                 <div class="input-group">
                   <label for="craneLimit">Лимит крана (SWL, кг)</label>
-                  <input id="craneLimit" class="form-input" type="number" step="100" placeholder="например: 10000" value="10000">
+                  <input id="craneLimit" class="form-input" type="number" step="100" placeholder="например: 10000"
+                    value="10000">
                 </div>
               </div>
 
@@ -201,8 +226,10 @@
           <div class="form-actions">
             <button type="submit" id="calcBtn" class="btn btn-primary btn-calc">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon-svg">
-                <path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1-2-1Z"/>
-                <path d="M8 7h8"/><path d="M8 11h8"/><path d="M8 15h5"/>
+                <path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1-2-1Z" />
+                <path d="M8 7h8" />
+                <path d="M8 11h8" />
+                <path d="M8 15h5" />
               </svg>
               <span>РАССЧИТАТЬ ВЕС</span>
             </button>
@@ -223,7 +250,7 @@
 
       <!-- Правая колонка: Результаты расчёта и Ведомость -->
       <section class="panel panel-results" id="resultsPanel" style="display: none;">
-        
+
         <!-- Заголовок панели результатов -->
         <div class="panel-header">
           <div class="panel-title-wrap">
@@ -274,33 +301,42 @@
         <!-- Панель инструментов ведомости (Копирование, перегенерация, печать, экспорт) -->
         <div class="results-toolbar">
           <div class="toolbar-group">
-            <button type="button" id="rerollBtn" class="btn btn-action" title="Сгенерировать другой случайный разброс с сохранением веса и замеров">
+            <button type="button" id="rerollBtn" class="btn btn-action"
+              title="Сгенерировать другой случайный разброс с сохранением веса и замеров">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21.5 2v6h-6"/><path d="M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
+                <path d="M21.5 2v6h-6" />
+                <path d="M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67" />
               </svg>
               <span>Новый разброс (🎲)</span>
             </button>
 
-            <button type="button" id="copyBtn" class="btn btn-action" title="Скопировать ведомость в буфер обмена для мессенджера или письма">
+            <button type="button" id="copyBtn" class="btn btn-action"
+              title="Скопировать ведомость в буфер обмена для мессенджера или письма">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
-                <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+                <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
+                <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
               </svg>
               <span id="copyBtnText">Скопировать текст</span>
             </button>
           </div>
 
           <div class="toolbar-group">
-            <button type="button" id="exportCsvBtn" class="btn btn-action" title="Скачать таблицу в формате Excel (CSV)">
+            <button type="button" id="exportCsvBtn" class="btn btn-action"
+              title="Скачать таблицу в формате Excel (CSV)">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/>
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" x2="12" y1="15" y2="3" />
               </svg>
               <span>Excel (CSV)</span>
             </button>
 
-            <button type="button" id="printBtn" class="btn btn-action btn-print" title="Открыть форму для печати или сохранения в PDF">
+            <button type="button" id="printBtn" class="btn btn-action btn-print"
+              title="Открыть форму для печати или сохранения в PDF">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/>
+                <polyline points="6 9 6 2 18 2 18 9" />
+                <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+                <rect width="12" height="8" x="6" y="14" />
               </svg>
               <span>Печать / PDF</span>
             </button>
@@ -353,13 +389,14 @@
         <div class="placeholder-content">
           <div class="placeholder-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M3 3v18h18"/>
-              <path d="m19 9-5 5-4-4-3 3"/>
+              <path d="M3 3v18h18" />
+              <path d="m19 9-5 5-4-4-3 3" />
             </svg>
           </div>
           <h3>Готов к расчёту контрольной перевески</h3>
           <p>
-            Введите общий вес партии, количество связок/штук и подъём в форму слева. При необходимости укажите фактические замеры сюрвейеров.
+            Введите общий вес партии, количество связок/штук и подъём в форму слева. При необходимости укажите
+            фактические замеры сюрвейеров.
           </p>
           <div class="placeholder-features">
             <div class="feature-item">
@@ -388,7 +425,8 @@
     <footer class="app-footer">
       <div class="footer-content">
         <p>Vessel-Weight Pro • Специализированный софт для морских портов, складов металлопродукции и ж/д терминалов</p>
-        <p class="copyright">Оригинальная идея и разработка: <strong>Aleksei Komarov</strong> • Обновлено до версии 2.0 Pro</p>
+        <p class="copyright">Оригинальная идея и разработка: <strong>Aleksei Komarov</strong> • Обновлено до версии 2.0
+          Pro</p>
       </div>
     </footer>
 
@@ -401,4 +439,5 @@
 
   <script src="main.js"></script>
 </body>
+
 </html>
